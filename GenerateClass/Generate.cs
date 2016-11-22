@@ -72,7 +72,7 @@ namespace GenerateClass {
                 case "REAL":
                     return typeof(double);
                 default:
-                    throw new ArgumentException("型が不明です: " + dataType);
+                    throw new ArgumentException($"型が不明です: { dataType }");
             }
 
         }
