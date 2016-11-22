@@ -44,7 +44,7 @@ namespace GenerateClass {
             var provider = new CSharpCodeProvider();
 
             //CSharpCodeProvider().FileExtensionで｢cs｣拡張子を取得できます
-            var fileName = classType.Name + "." + provider.FileExtension;
+            var fileName = $"{ classType.Name }.{ provider.FileExtension }";
 
             //Entityクラスを出力
             using (var writer = File.CreateText(fileName)) {
