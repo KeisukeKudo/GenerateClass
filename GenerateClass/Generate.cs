@@ -52,7 +52,7 @@ namespace GenerateClass {
             }
 
             //各プロパティ末尾のセミコロン削除
-            this.DeletePropertysEndComma(fileName);
+            this.DeletePropertysEndSemicolon(fileName);
 
         }
 
@@ -81,7 +81,7 @@ namespace GenerateClass {
         /// ｢public int id { get; set; };｣のように末尾にセミコロンが付いてしまうので削除する
         /// </summary>
         /// <param name="fileName"></param>
-        private void DeletePropertysEndComma(string fileName) {
+        private void DeletePropertysEndSemicolon(string fileName) {
 
             //ファイルを読込み､波括弧末尾のセミコロンを削除
             string fileDetail = File.ReadAllText(fileName).Replace("};", "}");
