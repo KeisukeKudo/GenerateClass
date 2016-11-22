@@ -32,7 +32,7 @@ namespace GenerateClass {
                 //propertyを定義
                 var field = new CodeMemberField {
                     Attributes = MemberAttributes.Public | MemberAttributes.Final,
-                    Name = t.ColumnName + " { get; set; }",
+                    Name = $"{ t.ColumnName } {{ get; set; }}",
                     Type = new CodeTypeReference(this.GetPropertyDataType(t.DataType)),
                 };
 
